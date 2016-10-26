@@ -15,6 +15,18 @@ public class DemoApplication {
 		return "Hola prros!";
 	}
 
+	@RequestMapping(value="/cosa", method=RequestMethod.GET)
+	@ResponseBody
+	String porget(@RequestParam(value="p", defaultValue = "no hay nada") String param ) {
+		return "Obtuve : "+param;
+	}
+
+	@RequestMapping(value="/cosa", method=RequestMethod.POST)
+	@ResponseBody
+	String otro() {
+		return "Hola cosa post!";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
