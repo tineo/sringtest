@@ -1,4 +1,4 @@
-package com.example;
+package com.horarios;
 
 
 public class OtroApplication {
